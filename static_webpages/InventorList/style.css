@@ -30,6 +30,8 @@ select {
     font-size: 18px;
     margin-top: 10px;
     margin-bottom: 25px;
+    border: 2px solid #555;
+    border-radius: 5px;
 }
 
 .card {
@@ -43,12 +45,14 @@ select {
     min-height: 250px;
 }
 
+/* Circle image glowing */
 .circle-image {
     width: 200px;
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #555;
+    animation: rainbow-glow 3s infinite alternate;
 }
 
 .small-square {
@@ -57,10 +61,24 @@ select {
     border-radius: 0;
     object-fit: cover;
     border: 4px solid #555;
+    animation: rainbow-glow 3s infinite alternate;
 }
 
 .info-text {
     font-size: 18px;
     line-height: 1.6;
     max-width: 600px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 3px solid #555;
+}
+
+@keyframes rainbow-glow {
+    0% { box-shadow: 0 0 10px #ff3cac; border-color: #ff3cac; }
+    16% { box-shadow: 0 0 10px #ffbd3c; border-color: #ffbd3c; }
+    33% { box-shadow: 0 0 10px #3cff7f; border-color: #3cff7f; }
+    50% { box-shadow: 0 0 10px #3c7fff; border-color: #3c7fff; }
+    66% { box-shadow: 0 0 10px #b23cff; border-color: #b23cff; }
+    83% { box-shadow: 0 0 10px #ff3c7f; border-color: #ff3c7f; }
+    100% { box-shadow: 0 0 10px #ff3cac; border-color: #ff3cac; }
 }
